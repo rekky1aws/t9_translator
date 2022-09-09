@@ -12,12 +12,11 @@ def to_t9 (input_str) :
 	splitted_str = []
 	result = ""
 	for l in input_str :
-		splitted_input_str.append(l)
+		splitted_str.append(l)
 		for i in range(len(correspondance)) :
 			if (l in correspondance[i]) :
 				for j in range(correspondance[i].index(l) + 1) :
 					result = f"{result}{i + 2}"
 	return result
-	pass
 
 print("coucou", to_t9("coucou"))
