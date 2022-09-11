@@ -15,13 +15,14 @@ def from_t9 (input_str) :
 				nb_p += 1
 			else :
 				result += correspondance[last_pressed][nb_p - 1]
-				nb_p = 0
+				nb_p = 1
 		else :
 			result += correspondance[last_pressed][nb_p - 1]
-			nb_p = 0
+			nb_p = 1
 			last_pressed = int(l) - 2
+
+	result += correspondance[last_pressed][nb_p - 1]
 	return result
-	pass
 
 def to_t9 (input_str) :
 	input_str = input_str.lower()
